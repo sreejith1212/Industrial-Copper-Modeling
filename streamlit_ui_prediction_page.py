@@ -75,7 +75,7 @@ if __name__ == "__main__":
         )
 
 
-if page == "Data Home":
+if page == "Home":
 
     st.header("Industrial Copper Modeling", divider = "rainbow")
     st.write("")
@@ -157,7 +157,7 @@ if page == "Predict Selling Price":
             prediction_1 = selling_price_predict(np.log(quantity_tons), customer, country, item_type, application, np.log(thickness), width, product_ref, status, 
                                         item_day, item_month, item_year, delivery_day, delivery_month, delivery_year)
             
-            col4.success(f"Predicted Item Selling Price : {prediction_1} 💰")
+            col4.success(f"Predicted Item Selling Price : $ {round(prediction_1[0])} 💰")
         except:
             col4.error("Enter valid values 🚨")
 
